@@ -10,7 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typegen": "sanity typegen generate --config ./sanity-typegen.json"
+    "typegen": "sanity typegen generate"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",
