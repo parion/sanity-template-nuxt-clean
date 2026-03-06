@@ -28,6 +28,3 @@ yarn-error.log*
 
 # VS Code
 .vscode
-
-# sanity
-*/sanity/types.ts

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { settingsQuery } from "~/sanity/queries";
-import type { SettingsQueryResult } from "~/sanity/types";
 
 const { data: settings } =
   await useSanityQuery<SettingsQueryResult>(settingsQuery);

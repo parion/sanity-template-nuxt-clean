@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { postQuery, somePostsQuery } from "~/sanity/queries";
-import type { PostQueryResult, SomePostsQueryResult } from "~/sanity/types";
 
 const { data: post } = await useSanityQuery<PostQueryResult>(postQuery, {
   slug: useRoute().params.slug,

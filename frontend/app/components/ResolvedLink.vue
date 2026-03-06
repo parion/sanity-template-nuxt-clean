@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { linkResolver } from "~/lib/utils";
-import type { Link } from "~/sanity/types";
 
 const NuxtLink = resolveComponent("NuxtLink");
 

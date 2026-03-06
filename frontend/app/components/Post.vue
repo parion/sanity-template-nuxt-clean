@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Post } from "../sanity/types";
-
 defineProps({
   post: {
     type: Object as PropType<Post>,

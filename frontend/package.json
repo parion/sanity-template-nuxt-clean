@@ -3,14 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npm run typegen",
     "build": "nuxt build",
-    "predev": "npm run typegen",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "typegen": "sanity typegen generate"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",
