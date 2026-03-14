@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import { h } from "vue";
-import type { PortableTextMarkComponentProps } from "@portabletext/vue";
-import ResolvedLink from "~/components/ResolvedLink.vue";
+import LinkMark from './mark/LinkMark.vue';
+import UnderlineMark from './mark/UnderlineMark.vue';
+import CodeMark from './mark/CodeMark.vue';
+import StrikethroughMark from './mark/StrikethroughMark.vue';
 
 const components = {
   marks: {
-    link: (props: PortableTextMarkComponentProps) =>
-      props.value
-        ? h(ResolvedLink, { link: props.value.link }, () => props.text)
-        : h("span", {}, props.text),
-    underline: (props: PortableTextMarkComponentProps) =>
-      h("u", {}, props.text),
-    code: (props: PortableTextMarkComponentProps) => h("code", {}, props.text),
-    "strike-through": (props: PortableTextMarkComponentProps) =>
-      h("s", {}, props.text),
+    link: LinkMark,
+    underline: UnderlineMark,
+    code: CodeMark,
+    "strike-through": StrikethroughMark,
   },
 };
 

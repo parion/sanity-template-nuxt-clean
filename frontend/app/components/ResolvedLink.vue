@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { linkResolver } from "~/lib/utils";
 
-const NuxtLink = resolveComponent("NuxtLink");
-
 const props = defineProps({
   link: {
     type: Object as PropType<Link>,
@@ -20,17 +18,15 @@ const resolvedLink = computed(() => {
 </script>
 
 <template>
-  <component
-    :is="resolvedLink ? NuxtLink : 'span'"
+  <NuxtLink
+    v-if="resolvedLink"
     :class="className"
-    v-bind="
-      resolvedLink && {
-        to: resolvedLink,
-        target: link?.openInNewTab ? '_blank' : undefined,
-        rel: link?.openInNewTab ? 'noopener noreferrer' : undefined,
-      }
-    "
-  >
-    <slot></slot>
-  </component>
+    :to="resolvedLink"
+    :target="link?.openInNewTab ? '_blank' : undefined"
+    :rel="link?.openInNewTab ? 'noopener noreferrer' : undefined">
+    <slot />
+  </NuxtLink>
+  <span v-else :class="className">
+    <slot />
+  </span>
 </template>

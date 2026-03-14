@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { pageQuery } from "~/sanity/queries";
 
-const { data: page } = await useSanityQuery<PageQueryResult>(pageQuery, {
+const { data: page } = useSanityQuery<PageQueryResult>(pageQuery, {
   slug: useRoute().params.slug,
 });
 
