@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { postsQuery, settingsQuery } from "~/sanity/queries";
 
-const { data: posts } = useSanityQuery<PostsQueryResult>(postsQuery);
-const { data: settings } =
-  useSanityQuery<SettingsQueryResult>(settingsQuery);
+const { data: posts } = await useLazySanityQuery<PostsQueryResult>(postsQuery);
+const { data: settings } = useSanityQuery<SettingsQueryResult>(settingsQuery);
 
 useSiteMetadata({
   title: "Sanity + Nuxt",
