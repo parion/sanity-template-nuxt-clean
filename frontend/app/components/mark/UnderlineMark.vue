@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps<{ value?: { text?: string } }>();
+import type { PortableTextMarkComponentProps } from '@nuxtjs/sanity/runtime/types.js';
+
+defineProps<PortableTextMarkComponentProps>();
 </script>
 <template>
   <u>{{ value?.text }}</u>

@@ -1,7 +1,13 @@
 <script setup lang="ts">
-defineProps<{ value?: { link?: Link }, text?: string }>();
+import type { PortableTextMarkComponentProps } from '@nuxtjs/sanity/runtime/types.js';
+
+defineProps<PortableTextMarkComponentProps>();
 </script>
 <template>
-  <ResolvedLink v-if="value?.link" :link="value.link">{{ text }}</ResolvedLink>
-  <span v-else>{{ text }}</span>
+  <ResolvedLink v-if="value?.link" :link="value.link">
+    <slot />
+  </ResolvedLink>
+  <span v-else>
+    <slot />
+  </span>
 </template>

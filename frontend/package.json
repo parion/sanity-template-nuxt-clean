@@ -14,9 +14,9 @@
     "@nuxtjs/sanity": "^2.2.0",
     "@sanity/client": "^7.17.0",
     "@tailwindcss/vite": "^4.2.1",
-    "groq": "^5.16.0",
+    "groq": "^5.17.1",
     "nuxt": "^4.4.2",
-    "sanity": "^5.16.0",
+    "sanity": "^5.17.1",
     "tailwindcss": "^4.2.1",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3"
