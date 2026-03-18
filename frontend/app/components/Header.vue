@@ -2,7 +2,7 @@
 import { settingsQuery } from "~/sanity/queries";
 
 const { data: settings } =
-  await useSanityQuery<SettingsQueryResult>(settingsQuery);
+   useSanityQuery<SettingsQueryResult>(settingsQuery);
 </script>
 
 <template>
